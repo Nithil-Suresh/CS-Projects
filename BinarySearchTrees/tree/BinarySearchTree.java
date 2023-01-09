@@ -1,6 +1,5 @@
 // Name: Nithil Suresh 
-// Computing ID: anh6ee@virginia.edu
-// Homework: Homework 7a
+
 package tree;
 
 public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> implements Tree<T>{
@@ -20,7 +19,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> imp
 	 * @return a reference to the new root of the subtree
 	 */
 	protected TreeNode<T> insert(T data, TreeNode<T> curNode) {
-		//TODO: Implement this method
 		if( curNode == null ) {
 			return new TreeNode<T>(data); 
 		}
@@ -46,7 +44,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> imp
 	
 	// Helper method
 	private boolean find(T data, TreeNode<T> curNode) {
-		//TODO: Implement this method
 		if( curNode == null ) {
 			return false;
 		}
@@ -71,26 +68,18 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> imp
 	
 	// Helper method
 	private T findMax(TreeNode<T> curNode) {
-		//TODO: Implement this method
 		if(curNode.right == null) {
 			return curNode.data;
 		}
 		return findMax(curNode.right);
 	}
 	
-	//-----------------------------------------------------------------------------
-	//EVERYTHING BELOW THIS POINT IS IMPLEMENTED FOR YOU: (Don't change anything!)
-	//WE HAVE IMPLEMENTED THE REMOVE METHOD FOR YOU
-	//YOU SHOULD STILL LOOK AT THIS CODE AND TRY YOUR BEST TO UNDERSTAND IT
-	//-----------------------------------------------------------------------------
-
 	@Override
 	public void remove(T data) {
 		this.root = remove(data, root); // Call remove at the root of the tree
 	}
 	
 	protected TreeNode<T> remove(T data, TreeNode<T> curNode) {
-		/* Note the use of compareTo() in the solution! */ 
 		
 		if(curNode == null) return curNode;
 		// if item I want to remove is smaller than the data of the current node...
