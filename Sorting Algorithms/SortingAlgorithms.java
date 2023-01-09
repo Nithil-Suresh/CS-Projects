@@ -1,6 +1,5 @@
 // Name: Nithil Suresh
-// Computing ID: anh6ee@virginia.edu
-// Homework Name: Implementing Sorting Algorithms 
+// Project Name: Implementing Sorting Algorithms 
 package sorting;
 
 public class SortingAlgorithms {
@@ -21,12 +20,8 @@ public class SortingAlgorithms {
 	// ####################
 	// ## INSERTION SORT ## ----------------------------------------------------------------------
 	// ####################
-	// ## IMPORTANT: the code we've given you below has a small bug!
-	// ##   You will need to look at this code and/or test, and fix the bug.
-	// ####################
 	/**
 	 * Usually a slow sorting algorithm. Insertion sort. 
-	 * @param list - An array of items
 	 */
 	public static <T extends Comparable<T>> void insertionSort(T[] list) {
 		for (int i = 1; i < list.length; i++) {
@@ -45,17 +40,11 @@ public class SortingAlgorithms {
 	// ## MERGE SORT ## ----------------------------------------------------------------------
 	// ################	
 	/**
-	 * Recursive Merge sort and associated helper method.
-	 * The second method below provides the portion of the array
-	 * (i.e., index i to j inclusive) that we want to sort.
-	 * 
-	 * @param list - An array of items
 	 */
 	public static<T extends Comparable<T>> void mergeSort(T[] list) {
 		mergeSort(list, 0, list.length - 1);
 	}
 	public static<T extends Comparable<T>> void mergeSort(T[] list, int i, int j) {
-		//TODO: write the body of this method
 		int listLength = j+1;
 		if( listLength < 2 ) {
 			return;
@@ -76,8 +65,6 @@ public class SortingAlgorithms {
 	}
 	
 	/**
-	 * Merge method for Merge Sort algorithm.
-	 * Your mergeSort algorithm will call this method as appropriate to do the merging.
 	 * @param list - An array of items
 	 * @param i - lower bound index
 	 * @param mid - middle index
@@ -111,79 +98,18 @@ public class SortingAlgorithms {
 			k++;
 		}
 	}
-	public static<T extends Comparable<T>> void merge(T[] list, int i, int mid, int j) {
-		//TODO: write the body of this method
-		
-		//Reminder: when using a generic type, to create a new array to hold items of type T,
-		//  you do something like the following:
-		@SuppressWarnings("unchecked")
-		T[] merged = (T[]) new Comparable[j-i+1]; // space for new merged list to hold (sorted) sublist
-//		int leftSize =  mid - i;
-//		int rightSize = j - mid +1;
-//		int a_ptr = i;
-//		int b_ptr = mid;
-//		int merged_ptr = 0;
-//		while( a_ptr < mid && b_ptr < j) {
-//			if( (int)list[a_ptr] <= (int) list[b_ptr]) {
-//				merged[merged_ptr] = list[a_ptr];
-//				a_ptr++;
-//			}
-//			else {
-//				merged[merged_ptr] = list[b_ptr];
-//				b_ptr++;
-//			}
-//			merged_ptr++;
-//		}
-//		while ( a_ptr < mid ) {
-//			merged[merged_ptr] = list[a_ptr];
-//			merged_ptr++;
-//			a_ptr++;
-//		}
-//		while( b_ptr < j ) {
-//			merged[merged_ptr] = list[b_ptr];
-//			merged_ptr++;
-//			b_ptr++;
-//		}
-//		while( a_ptr < mid && b_ptr < j) {
-//			if( (int)list[a_ptr] <= (int)list[b_ptr]) {
-//				merged[merged_ptr] = list[a_ptr];
-//				a_ptr++;
-//			}
-//			else {
-//				merged[merged_ptr] = list[b_ptr];
-//				b_ptr++;
-//			}
-//			merged_ptr++;
-//		}
-//		while( a_ptr < mid ) {
-//			merged[merged_ptr] = list[a_ptr];
-//			merged_ptr++;
-//			a_ptr++;
-//		}
-//		while( b_ptr < j ) {
-//			merged[merged_ptr] = list[b_ptr];
-//			merged_ptr++;
-//			b_ptr++;
-//		}
-	}
 
 	
 	// ###############
 	// ## QUICKSORT ## ----------------------------------------------------------------------
 	// ###############	
 	/**
-	 * Recursive Quicksort and associated helper method.
-	 * The second method below provides the portion of the array
-	 * (i.e., index i to j inclusive) that we want to sort.
-	 * >>> Use any partition scheme that you like. 
-	 * 
 	 * @param list - An array of items
 	 */
 	public static<T extends Comparable<T>> void quickSort(T[] list) {
 		quickSort(list, 0, list.length - 1);
 	}
 	public static<T extends Comparable<T>> void quickSort(T[] list, int i, int j) {
-		//TODO: write the body of this method
 		if( i >= j ) {
 			return;
 		}
@@ -203,27 +129,6 @@ public class SortingAlgorithms {
 		swap(list, leftPointer, j);
 		quickSort(list, i, leftPointer -1);
 		quickSort(list, leftPointer+1, j);
-	}
-	
-	/**
-	 * Partition method for Quicksort - Use any valid partition algorithm that you like.
-	 * Your quickSort algorithm will call this method as appropriate to do the partitioning.
-	 * @param list - An array of items
-	 * @param i - lower bound
-	 * @param j - upper bound
-	 */
-	public static<T extends Comparable<T>> int partition(T[] list, int i, int j) {	
-		//TODO: write the body of this method
-		return 0; // be sure to return the right value and not 0
-		
-		
-	}
-	
-	//=================================================================================
-	
-	public static void main(String[] args) {
-		// TODO:  If you wish to do your own kind of testing
-		
 	}
 
 }
