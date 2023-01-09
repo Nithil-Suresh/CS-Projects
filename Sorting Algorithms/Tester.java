@@ -1,7 +1,6 @@
 package sorting;
 
-// Don't forget, to print an array (say for debugging, just convert it to a string first:
-//    System.out.println(Arrays.toString(list));
+
 
 
 import java.util.Arrays;
@@ -73,8 +72,7 @@ public class Tester {
 		}
 		
 		// Make sure the same elements are in each array using binary search.
-		// This works because we already know two arrays are same length and 
-		//    the list named sorted is correctly sorted.
+
 		boolean ok = true;
 		for (int i = 0; i < orig.length; i++) {
 			int inSortedIndex = Arrays.binarySearch(sorted, orig[i]);
