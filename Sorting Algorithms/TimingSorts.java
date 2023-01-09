@@ -2,7 +2,7 @@ package sorting;
 
 import java.util.Arrays;
 
-enum SortType { SYSTEM, MERGE, QUICK, INSERTION };  // MERGE_HYBRID, QUICK_RAND // these 2 not used in Fall 2022
+enum SortType { SYSTEM, MERGE, QUICK, INSERTION };  // MERGE_HYBRID, QUICK_RAND
 
 
 public class TimingSorts {
@@ -31,8 +31,7 @@ public class TimingSorts {
 		
 		
 		// The loop below times all the sorts on all the lists.
-		// It does this for the same size list, but you may need to change the size for insertion sort
-		//   and maybe quicksort if you don't do randomized partition in order to avoid run-time issues
+		
 		     
 		for (SortType s: SortType.values()) {
 
@@ -71,7 +70,7 @@ public class TimingSorts {
 			break;
 		
 		case QUICK:
-			try {  // may fail -- see notes in in-lab instructions
+			try {  
 				SortingAlgorithms.quickSort(listCopy);
 			}
 			catch (java.lang.StackOverflowError e) {
@@ -79,9 +78,9 @@ public class TimingSorts {
 			}
 			break;
 //		case QUICK_RAND:
-////			SortingAlgorithms.quickSortRand(listCopy); // for Fall 2022, you didn't have to write this method
+////			SortingAlgorithms.quickSortRand(listCopy);
 //			break;
-//		case MERGE_HYBRID:   // for Fall 2022, you didn't have to do this one!
+//		case MERGE_HYBRID:   
 ////			SortingAlgorithms.mergeSortHybrid(listCopy);
 //			break;
 		default:
@@ -94,7 +93,6 @@ public class TimingSorts {
 	
 
 	// an almost sorted list, version #1
-	// We update the last percentage of elements of a sorted list to be random
 	private static Integer[] makeAlmostSorted1(Integer[] ascendingList, double percentToChange) {
 		Integer[] list = ascendingList.clone();
 		int size = ascendingList.length;
