@@ -1,17 +1,11 @@
 // Name: Nithil Suresh 
-// Computing ID: anh6ee@virginia.edu
-// Homework: Homework 7a
 package tree;
 
 /**
- * Self-balancing AVL Tree
- * @author CS 2100 Team
- *
  * @param <T>
  */
  
- // Don't worry about this class for the first assignment in the module.
- // You WILL use this class in the second assignment on AVL trees.
+
 
 public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T>{
 	//public static void main(String [] args) {
@@ -30,7 +24,6 @@ public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T>{
 		this.root = insert(data, this.root);
 	}
 	protected TreeNode<T> insert(T data, TreeNode<T> curNode) {
-		//TODO: Implement this method
 		curNode = super.insert(data,  curNode);
 		
 		/* Handle the case when remove returns null */
@@ -71,7 +64,6 @@ public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T>{
 	 * @return
 	 */
 	private TreeNode<T> balance(TreeNode<T> curNode) {
-		//TODO: Implement this method
 		//System.out.println(balanceFactor(curNode));
 		if( balanceFactor(curNode) == 2 ) {
 			if( balanceFactor(curNode.left) == 1) {
@@ -95,7 +87,6 @@ public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T>{
 	}
 	
 	private TreeNode<T> rotateRight(TreeNode<T> curNode) {
-		//TODO: Implement this method
 		TreeNode<T> lNew = curNode.left;
 		TreeNode<T> LR = curNode.left.right;
 		lNew.right = curNode;
@@ -106,7 +97,6 @@ public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T>{
 	}
 	
 	private TreeNode<T> rotateLeft(TreeNode<T> curNode){
-		//TODO: Implement this method
 		TreeNode<T> rNew = curNode.right;
 		TreeNode<T> RL = curNode.right.left;
 		rNew.left = curNode;
@@ -117,7 +107,6 @@ public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T>{
 	}
 	
 	private int balanceFactor(TreeNode<T> node) {
-		//TODO: Implement this method	
 		return height(node.left) - height(node.right); 
 	}
 
