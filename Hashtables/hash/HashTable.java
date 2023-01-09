@@ -1,6 +1,4 @@
 // Name: Nithil Suresh 
-// Computing ID: anh6ee@viginia.edu
-// Homework Name: Homework 10: Hash Tables
 package hash;
 
 
@@ -31,19 +29,10 @@ public class HashTable<K,V> implements Map<K,V>{
 	private static final int INITIAL_CAP = 5;  // a default initial capacity (set low for initial debugging)
 	private int currentCapacity = INITIAL_CAP;
 
-	/*
-	 * Here are some hints about how to declare your hash table.
-	 * If you're using open addressing, it might look like this:
-	 * 		private HashNode<K,V>[] table;
-	 * If you're using separate chaining, it might look like this:
-	 * 		private HashNode<K,V>[] table;
-	 * or like this:
-	 * 		private ArrayList<HTNode<K, V>> table;
-	 */
+
 	private HashNode<K,V>[] table;
 	private int size = 0;
 	
-	/* YOU WILL LIKELY WANT MORE PRIVATE VARIABLES HERE */
 	
 	
 	public HashTable() {  // default constructor sets capacity to default value
@@ -51,16 +40,7 @@ public class HashTable<K,V> implements Map<K,V>{
 	}
 	
 	public HashTable(int capacity) {  // constructor sets capacity to given value
-		/* TODO: IMPLEMENT THIS METHOD */
-		
-		/*
-		 * Here are some hints about how to allocate memory for your hash table.
-		 * If you're using either definition that uses arrays shown above, it might
-		 * look like this:
-		 * 		this.table = new HashNode[capacity];
-		 * If you're using an ArrayList as shown above, it might look like this:
-		 * 		this.table = new ArrayList<>(capacity); // sets list's initial capacity
-		 */
+
 		this.table = new HashNode[capacity];
 		currentCapacity = capacity;
 	}
@@ -69,7 +49,6 @@ public class HashTable<K,V> implements Map<K,V>{
 	//    the existing key's value
 	@Override
 	public void insert(K key, V value) {
-		/* TODO: IMPLEMENT THIS METHOD */
 		HashNode <K, V> newNode = new HashNode <K, V>(key, value);
 		double lambda = (double) size / currentCapacity;
 		if( lambda >= 0.75 ) {
@@ -110,7 +89,6 @@ public class HashTable<K,V> implements Map<K,V>{
 //	}
 	@Override
 	public V retrieve(K key) {
-		/* TODO: IMPLEMENT THIS METHOD */
 		for(int i = 0; i < table.length; i++) {
 			if( table[i] != null ) {
 				if( table[i].getKey().equals(key) ) {
@@ -123,7 +101,6 @@ public class HashTable<K,V> implements Map<K,V>{
 
 	@Override
 	public boolean contains(K key) {
-		/* TODO: IMPLEMENT THIS METHOD */
 		for(int i = 0; i < table.length; i++) {
 			if( table[i] != null ) {
 				if( table[i].getKey().equals(key) )
@@ -135,7 +112,6 @@ public class HashTable<K,V> implements Map<K,V>{
 
 	@Override
 	public void remove(K key) {
-		/* TODO: IMPLEMENT THIS METHOD */
 		for( int i = 0; i < table.length; i++ ) {
 			if( table[i] != null ) {
 				if( table[i].getKey().equals(key) ) {
@@ -148,14 +124,7 @@ public class HashTable<K,V> implements Map<K,V>{
 	}
 	
 	
-	/*
-	 * OPTIONAL HELPER METHODS: The next two methods will let you print out your
-	 * entire hash table, or let you make sure all keys that hash to a single
-	 * bucket's index get stored as they should in your table. You'll need to
-	 * implement the second method; it depends on how you store entries and
-	 * handle collisions. This is NOT required, but you may find it helpful when
-	 * debugging and testing your code.
-	 */
+
 	
 	public void printHashTable() {
 		for (int idx=0; idx < this.currentCapacity; ++idx) {
@@ -165,14 +134,7 @@ public class HashTable<K,V> implements Map<K,V>{
 	}
 	
 	private void printEntriesByIndex(int idx) {
-		/*
-		 * To implement this to help print out one bucket of your hash table, you need to:
-		 * a) If there are no key/value pairs in the bucket idx, print "no entries"
-		 * b) If there are key/value pairs at that bucket, use a loop to print each one.
-		 *    Best to use System.out.print() and not println() so they're all on one line.
-		 * c) At the end of that loop, do System.out.println() to print a new line.
-		 */
-		//System.out.println("Not yet implemented...");
+
 		if( table[idx] == null ) {
 			System.out.println("no entries");
 		}
