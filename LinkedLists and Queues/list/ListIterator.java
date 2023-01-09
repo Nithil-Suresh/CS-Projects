@@ -1,6 +1,4 @@
 // Name: Nithil Suresh
-// Computing ID: anh6ee@virginia.edu
-// Homework Name: Homework 5 - LinkedLists
 package list;
 
 public class ListIterator<T> {
@@ -10,7 +8,6 @@ public class ListIterator<T> {
 	
 /* ListIterator constructor. Accepts the current node. */
 	public ListIterator(ListNode<T> currentNode) { 
-		/* TODO: Implement this method */
 		curNode = currentNode;
 	}
 	
@@ -19,8 +16,6 @@ public class ListIterator<T> {
 	 * the list on either side
 	 */
 	public boolean isPastEnd() { 
-		/* TODO: Implement this method */
-		/* Hint: How do you know if you’re at the dummy tail node? */
 		if( curNode.next == null )
 			return true;
 		else
@@ -28,8 +23,6 @@ public class ListIterator<T> {
 	}
 	
 	public boolean isPastBeginning() { 
-		/* TODO: Implement this method */
-		/* Hint: How do you know if you’re at the dummy head node? */
 		if( curNode.prev == null )
 			return true;
 		else
@@ -41,8 +34,6 @@ public class ListIterator<T> {
 	 * Return the data if appropriate, otherwise return null
 	 */
 	public T value() {
-		/* TODO: Implement this method */
-		/* Hint: Remember to first validate the position of the Iterator */
 		return curNode.getData();
 	}
 	
@@ -51,9 +42,6 @@ public class ListIterator<T> {
 	 * forward / backward one position
 	 */
 	public void moveForward() { 
-		/* TODO: Implement this method */
-		/* Hint: Remember to check IF you can move forward before you do! */
-		/*       (Otherwise, do not move at all) */
 		if( isPastEnd() )
 			return;
 		else
@@ -61,9 +49,6 @@ public class ListIterator<T> {
 	}
 	
 	public void moveBackward() { 
-		/* TODO: Implement this method */
-		/* Hint: Remember to check IF you can move backwards before you do! */
-		/*       (Otherwise, do not move at all) */
 		if( isPastBeginning() )
 			return;
 		else
