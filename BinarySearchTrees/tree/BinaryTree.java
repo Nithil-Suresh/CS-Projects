@@ -1,6 +1,5 @@
 // Name: Nithil Suresh 
-// Computing ID: anh6ee@virginia.edu
-// Homework: Homework 7a
+
 package tree;
 
 
@@ -10,9 +9,6 @@ public class BinaryTree<T> {
 	
 	/* Tree Traversal methods */
 	
-	//HINT for three traversal methods: you can call toString() on the node's 
-	//     data when you are executing the "root" command on a given node 
-	//     (e.g. curNode.data.toString() + " ";) // Note the space added at the end
 	
 	//left, root, right
 	public String getInOrder() {
@@ -20,16 +16,10 @@ public class BinaryTree<T> {
 	}
 	String answerIn = "";
 	private String getInOrder(TreeNode<T> curNode) {
-		//TODO: return the in order traversal of this tree, space separated
 		if( curNode == null ){
 			return "";
 		}
 		return getInOrder(curNode.left)+ curNode.data.toString() + " " + getInOrder(curNode.right);
-//			return answerIn;
-//		getInOrder(curNode.left);
-//		answerIn += curNode.data.toString() + " ";
-//		getInOrder(curNode.right);
-//		return answerIn;
 	}
 	
 	// root, left, right
@@ -38,7 +28,6 @@ public class BinaryTree<T> {
 	}
 	String answerPre = "";
 	private String getPreOrder(TreeNode<T> curNode) {
-		//TODO: return the pre order traversal of this tree, space separated
 		
 		if( curNode == null )
 			return answerPre;
@@ -54,7 +43,6 @@ public class BinaryTree<T> {
 	}
 	String answerPost = "";
 	private String getPostOrder(TreeNode<T> curNode) {
-		//TODO: return the post order traversal of this tree, space separated
 		if( curNode == null )
 			return answerPost;
 		getPostOrder(curNode.left);
@@ -64,10 +52,6 @@ public class BinaryTree<T> {
 	}
 
 
-	//------------------------------------------------------------------------
-	//EVERYTHING BELOW THIS POINT IS IMPLEMENTED FOR YOU
-	//YOU SHOULD STILL LOOK AT THIS CODE
-	//------------------------------------------------------------------------
 	
 	/* A somewhat more pretty print method for debugging */
 	public void printTree() {
@@ -129,13 +113,7 @@ public class BinaryTree<T> {
 		}
 
 
-	/* copyOf(): Changes the contents of the current tree to be a copy of the
-	   nodes in the tree given as the method argument. Example of how to use:
-	        BinaryTree<String> newTree = new BinaryTree<>();
-	        newTree.copyOf(existingTree);
-	   The new tree is now a separate tree with new nodes that have the same
-	   contents as the existing tree. (Note: this is what’s called a shallow-copy.)  
-	*/
+
 		public void copyOf(BinaryTree<T> source) {
 			this.root = copyRecursive(source.root);
 		}
