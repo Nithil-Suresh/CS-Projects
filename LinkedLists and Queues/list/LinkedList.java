@@ -1,12 +1,10 @@
 // Name: Nithil Suresh
-// Computing ID: anh6ee@virginia.edu
-// Homework Name: Homework 5 - LinkedLists
 package list;
 
 /**
  * 
  * A custom built linked list
- * T here is the type the list stores
+ * There is the type the list stores
  */
 public class LinkedList<T> implements List<T>{
 
@@ -15,7 +13,6 @@ public class LinkedList<T> implements List<T>{
 	private int size;
 	
 	public LinkedList() {
-		/* TODO: Implement this method */  
 		head = new ListNode( null );
 		tail = new ListNode ( null );
 		head.next = tail;
@@ -26,7 +23,6 @@ public class LinkedList<T> implements List<T>{
 	}
 	
 	public int size() {
-		/* TODO: Implement this method */  
 		return size;
 	}
 	
@@ -43,7 +39,6 @@ public class LinkedList<T> implements List<T>{
 	 * Clears out the entire list
 	 */
 	public void clear() {
-		/* TODO: Implement this method */ 
 		while( size > 0 ) {
 			removeAtHead();
 		}
@@ -54,7 +49,6 @@ public class LinkedList<T> implements List<T>{
 	 * @param data
 	 */
 	public void insertAtTail(T data) {
-		/* TODO: Implement this method */ 
 		ListNode lastNode = new ListNode (data);
 		ListNode oldLast = tail.prev;
 		oldLast.next = lastNode;
@@ -71,7 +65,6 @@ public class LinkedList<T> implements List<T>{
 	 * @param data
 	 */
 	public void insertAtHead(T data) {
-		/* TODO: Implement this method */ 
 		ListNode newNode = new ListNode (data);
 		ListNode oldFirst = head.next;
 		newNode.next = oldFirst;
@@ -87,7 +80,6 @@ public class LinkedList<T> implements List<T>{
 	 * @param index
 	 */
 	public void insertAt(int index, T data) {
-//		/* TODO: Implement this method */  
 
 		ListNode newNode = new ListNode(data);
 		ListNode current = head;
@@ -115,7 +107,6 @@ public class LinkedList<T> implements List<T>{
 	 * Inserts data after the node pointed to by iterator
 	 */
 	public void insert(ListIterator<T> it, T data) {
-		/* TODO: Implement this method */ 
 		ListNode newNode = new ListNode (data);
 		ListNode nextNode = it.curNode.next;
 		it.curNode.next = newNode;
@@ -128,7 +119,6 @@ public class LinkedList<T> implements List<T>{
 	
 	
 	public T removeAtTail(){
-		/* TODO: Implement this method */  
 		if( size == 0 ) {
 			return null;
 		}
@@ -141,7 +131,6 @@ public class LinkedList<T> implements List<T>{
 	}
 	
 	public T removeAtHead(){
-		/* TODO: Implement this method */  
 		if( size == 0 ) {
 			return null;
 		}
@@ -158,7 +147,6 @@ public class LinkedList<T> implements List<T>{
 	 * Sets the iterator to the node AFTER the one removed
 	 */
 	public T remove(ListIterator<T> it) {
-		/* TODO: Implement this method */  
 		ListNode ret = it.curNode;
 		ListNode previous = it.curNode.prev;
 		ListNode next = it.curNode.next;
@@ -175,7 +163,6 @@ public class LinkedList<T> implements List<T>{
 	 * @return
 	 */
 	public int find(T data) {
-		/* TODO: Implement this method */  
 		ListIterator iterator = new ListIterator(head.next);
 		for( int i = 0; i < size; i++ ) {
 			if(iterator.curNode.getData() == null)
@@ -196,7 +183,6 @@ public class LinkedList<T> implements List<T>{
 	 * @return
 	 */
 	public T get(int index) { 
-		/* TODO: Implement this method */  
 		if( index < 0 || index > size )
 			return null;
 		if( size == 0 )
@@ -225,13 +211,11 @@ public class LinkedList<T> implements List<T>{
 	
 	/* Return iterators at front and end of list */
 	public ListIterator<T> front(){ 
-		/* TODO: Implement this method */  
 		ListIterator <T> iterator = new ListIterator(head.next);
 		return iterator;
 	}
 
 	public ListIterator<T> back(){
-		/* TODO: Implement this method */ 
 		ListIterator <T> iterator = new ListIterator(tail.prev);
 		return iterator;
 	}
