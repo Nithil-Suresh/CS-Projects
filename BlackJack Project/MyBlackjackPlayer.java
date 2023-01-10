@@ -1,16 +1,11 @@
 // Nithil Suresh
-// Computing ID: anh6ee@virginia.edu
-// Module 3 - Blackjack
 package agents;
 
 import casino.BlackjackPlayer;
 import casino.Card;
 import casino.Move;
 
-/*
- * Define a blackjack player by inheriting from the superclass BlackjackPlayer
- *   and implementing the 3 abstract methods.
- */
+
 public class MyBlackjackPlayer extends BlackjackPlayer{
 
 	@Override
@@ -45,13 +40,7 @@ public class MyBlackjackPlayer extends BlackjackPlayer{
 
 	@Override
 	public void handOver(Card[] dealerHand) {
-		/**
-		 * If you care about looking at the dealer's hand once
-		 * the hand is over, then you can do it here. This method
-		 * is called automatically after every hand and a copy of the dealer's
-		 * final hand is given to you to process. The dealer's hand will be
-		 * found in the array of Cards that you pass when the method returns.
-		 */
+
 		
 	}
 
