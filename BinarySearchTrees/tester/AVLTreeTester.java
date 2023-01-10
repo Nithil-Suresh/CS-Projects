@@ -7,8 +7,7 @@ public class AVLTreeTester {
 
 	public static void main(String[] args) {
 		
-		/* Here are two test cases for your implementations. */
-		/* You SHOULD create more */
+
 		
 		/*
 		 * 	Correct output:
@@ -20,7 +19,6 @@ public class AVLTreeTester {
 		 *	AVL Post: 1 3 2 5 7 6 9 8 4 
 		 */
 
-		//You can comment this line back in next week
 		AVLTree<Integer> avl = new AVLTree<Integer>();
 		
 		//BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
@@ -41,7 +39,6 @@ public class AVLTreeTester {
 //		System.out.println("BST In: " + bst.getInOrder());
 //		System.out.println("BST Post: " + bst.getPostOrder());
 		
-		// You can comment these lines in next week as well
 		 System.out.println("AVL Pre: " + avl.getPreOrder());
 		 System.out.println("AVL In: " + avl.getInOrder());
 		 System.out.println("AVL Post: " + avl.getPostOrder());
