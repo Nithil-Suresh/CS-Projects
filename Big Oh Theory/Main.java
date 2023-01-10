@@ -9,7 +9,7 @@ public class Main {
 public static void main(String[] args) {
 		
 		/* This main function generates a sorted array of random numbers given an array size */
-		/* You will call various methods with increasing array sizes to see scalability working in action */
+	
 		Scanner in = new Scanner(System.in);
 		
 		while(true) {
