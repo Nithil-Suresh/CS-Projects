@@ -1,6 +1,4 @@
 // Nithil Suresh
-// anh6ee@virginia.edu
-// Homework Module 2
 public class RobotZookeeper {
 	private int monkeyScore;
 	private int lionScore;
