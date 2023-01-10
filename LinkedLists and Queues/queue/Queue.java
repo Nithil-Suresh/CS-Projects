@@ -1,9 +1,8 @@
 // Name: Nithil Suresh
-// Computing ID: anh6ee@virginia.edu
-// Homework Name: Homework 5 - LinkedLists
+
 package queue;
 
-/* You SHOULD use your custom built linked list for this */
+
 import list.LinkedList;
 
 /**
@@ -18,8 +17,7 @@ public class Queue<T> implements IQueue<T>{
 	/**
 	 * Constructor: Initialize the inner list
 	 */
-	public Queue(){
-		/* TODO: Implement this method */  
+	public Queue(){ 
 		list = new LinkedList<T>();
 	}
 	
@@ -27,7 +25,6 @@ public class Queue<T> implements IQueue<T>{
 	 * Return the size by invoking the size of the list
 	 */
 	public int size() { 
-		/* TODO: Implement this method */
 		return list.size();
 	}
 	
@@ -35,8 +32,6 @@ public class Queue<T> implements IQueue<T>{
 	 * Simply add the data to the tail of the linked list
 	 */
 	public void enqueue(T data) {
-		/* TODO: Implement this method */  
-		/* Hint: Which method in LinkedList.java already accomplishes this? */ 
 		list.insertAtTail(data);
 	}
 	
@@ -44,8 +39,6 @@ public class Queue<T> implements IQueue<T>{
 	 * Simply remove data from the head of the list, throw exception if list is empty.
 	 */
 	public T dequeue(){		
-		/* TODO: Implement this method */  
-		/* Hint: Which method in LinkedList.java already accomplishes this? */  
 		T ret = list.removeAtHead();
 		return ret;
 	}
