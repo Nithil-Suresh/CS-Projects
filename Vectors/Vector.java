@@ -41,13 +41,11 @@ public class Vector<T> implements List<T> {
 
 	@Override
 	public int size() {
-		// TODO: Implement this method
 		return size;
 	}
 
 	@Override
 	public void clear() {
-		// TODO: Implement this method
 		for( int i = 0; i < size; i++ ) {
 			itemArray[i] = null;
 		}
@@ -56,7 +54,6 @@ public class Vector<T> implements List<T> {
 
 	@Override
 	public void insertAtTail(T item) {
-		// TODO: Implement this method
 		if(size == capacity()) {
 			resize(capacity() + 100);
 		}
@@ -68,7 +65,6 @@ public class Vector<T> implements List<T> {
 	
 	@Override
 	public void insertAtHead(T item) {
-		// TODO: Implement this method
 		if(size == capacity()) {
 			resize(capacity() + 100);
 		}
@@ -92,7 +88,6 @@ public class Vector<T> implements List<T> {
 
 	@Override
 	public void insertAt(int index, T item) {
-		// TODO: Implement this method
 		if( index < 0 || index > size)
 			return;
 		if(index == 0) {
@@ -122,7 +117,6 @@ public class Vector<T> implements List<T> {
 
 	@Override
 	public T removeAtTail() {
-		// TODO: Implement this method
 		
 		T item = itemArray[size() - 1];
 		itemArray[size() - 1] = null;
@@ -133,7 +127,6 @@ public class Vector<T> implements List<T> {
 
 	@Override
 	public T removeAtHead() {
-		// TODO: Implement this method
 		
 		T item = itemArray[0];
 		for(int i = 0; i < size(); i++) {
@@ -146,7 +139,6 @@ public class Vector<T> implements List<T> {
 
 	@Override
 	public int find(T item) {
-		// TODO: Implement this method
 		
 		for( int i = 0; i < size; i++ ) {
 			if( get(i).equals(item) ) {
@@ -158,7 +150,6 @@ public class Vector<T> implements List<T> {
 	
 	@Override
 	public T get(int index) {
-		// TODO: Implement this method
 		if( index > size()-1 || index < 0)
 			return null;
 		return itemArray[index];
