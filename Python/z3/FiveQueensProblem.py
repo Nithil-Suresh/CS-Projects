@@ -1,4 +1,4 @@
-# Nithil Suresh  Email ID: anh6ee
+# Nithil Suresh 
 from z3 import Bool, And, Or, Not, Solver
 from itertools import combinations
 
